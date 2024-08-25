@@ -5,12 +5,12 @@
 	compatible = "xlnx,zynqmp-rfc-vsh", "xlnx,zynqmp-zcu102", "xlnx,zynqmp";
 };
 
-/delete-node/ &gem3;
-/delete-node/ &gpu;
-/delete-node/ &pcie;
+// /delete-node/ &gem3;
+// /delete-node/ &gpu;
+// /delete-node/ &pcie;
 // /delete-node/ &psgtr;
-/delete-node/ &qspi;
-/delete-node/ &sata;
+// /delete-node/ &qspi;
+// /delete-node/ &sata;
 
 &i2c0 {
 	status = "disabled";
@@ -19,15 +19,6 @@
 	status = "disabled";
 };
 
-/* Fix collision with u61 */
-// &i2c0 {
-// 	i2c-mux@75 {
-// 		i2c@2 {
-// 			max15303@1b { /* u8 */
-// 				compatible = "maxim,max15303";
-// 				reg = <0x1b>;
-// 			};
-// 			/delete-node/ max15303@20;
-// 		};
-// 	};
-// };
+&gem3 {
+	status = "disabled";
+};
