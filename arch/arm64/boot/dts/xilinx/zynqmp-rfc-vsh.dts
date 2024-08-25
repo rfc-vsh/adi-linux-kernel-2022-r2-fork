@@ -2,7 +2,7 @@
 
 / {
 	model = "ZynqMP RFC VSH";
-	compatible = "xlnx,zynqmp-zcu102-revB", "xlnx,zynqmp-zcu102", "xlnx,zynqmp";
+	compatible = "xlnx,zynqmp-rfc-vsh", "xlnx,zynqmp-zcu102", "xlnx,zynqmp";
 };
 
 // /delete-node/ gem3;
