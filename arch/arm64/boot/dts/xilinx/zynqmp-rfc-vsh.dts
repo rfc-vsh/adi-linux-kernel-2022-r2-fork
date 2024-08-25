@@ -12,6 +12,14 @@
 	aliases {
 		serial0 = &uart0;
 		spi0 = &spi0;
+		/delete-property/ ethernet0;
+		/delete-property/ i2c0;
+		/delete-property/ i2c1;
+		/delete-property/ nvmem0;
+		/delete-property/ rtc0;
+		/delete-property/ serial1;
+		/delete-property/ usb0;
+		/delete-property/ mmc0;
 	};
 
 };
@@ -39,6 +47,14 @@
 
 &sdhci1 {
 	/delete-property/ no-1-8-v;
+	/delete-property/ pinctrl-names;
+	/delete-property/ pinctrl-0;
+};
+
+&uart0 {
+	cts-override;
+	device_type = "serial";
+	port-number = <0x00>;
 };
 
 &uart1 {
