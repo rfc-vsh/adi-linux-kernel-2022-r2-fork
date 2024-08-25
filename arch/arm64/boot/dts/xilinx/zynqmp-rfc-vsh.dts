@@ -8,7 +8,7 @@
 /delete-node/ &gem3;
 /delete-node/ &gpu;
 /delete-node/ &pcie;
-/delete-node/ &psgtr;
+// /delete-node/ &psgtr;
 /delete-node/ &qspi;
 /delete-node/ &sata;
 
