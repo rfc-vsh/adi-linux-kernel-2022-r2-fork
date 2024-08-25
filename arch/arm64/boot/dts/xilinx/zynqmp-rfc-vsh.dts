@@ -80,7 +80,7 @@
 
 &dwc3_0 {
 	status = "disabled";
-}
+};
 
 &zynqmp_dp_snd_codec0 {
 	status = "disabled";
