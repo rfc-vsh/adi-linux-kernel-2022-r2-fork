@@ -3,14 +3,20 @@
 / {
 	model = "ZynqMP RFC VSH";
 	compatible = "xlnx,zynqmp-rfc-vsh", "xlnx,zynqmp-zcu102", "xlnx,zynqmp";
+
+	chosen {
+		bootargs = " earlycon console=ttyPS0,115200 clk_ignore_unused";
+		stdout-path = "serial0:115200n8";
+	};
+
+	aliases {
+		serial0 = &uart0;
+		spi0 = &spi0;
+	};
+
 };
 
 // /delete-node/ &gem3;
-// /delete-node/ &gpu;
-// /delete-node/ &pcie;
-// /delete-node/ &psgtr;
-// /delete-node/ &qspi;
-// /delete-node/ &sata;
 
 &i2c0 {
 	status = "disabled";
@@ -20,5 +26,21 @@
 };
 
 &gem3 {
+	status = "disabled";
+};
+
+&qspi {
+	status = "disabled";
+};
+
+&sata {
+	status = "disabled";
+};
+
+&sdhci1 {
+	/delete-property/ no-1-8-v;
+};
+
+&uart1 {
 	status = "disabled";
 };
