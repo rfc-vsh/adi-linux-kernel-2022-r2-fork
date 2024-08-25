@@ -5,12 +5,12 @@
 	compatible = "xlnx,zynqmp-rfc-vsh", "xlnx,zynqmp-zcu102", "xlnx,zynqmp";
 };
 
-/delete-node/ gem3;
-/delete-node/ gpu;
-/delete-node/ pcie;
-/delete-node/ psgtr;
-/delete-node/ qspi;
-/delete-node/ sata;
+/delete-node/ &gem3;
+/delete-node/ &gpu;
+/delete-node/ &pcie;
+/delete-node/ &psgtr;
+/delete-node/ &qspi;
+/delete-node/ &sata;
 
 &i2c0 {
 	status = "disabled";
