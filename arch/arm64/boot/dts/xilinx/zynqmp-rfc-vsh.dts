@@ -1,0 +1,11 @@
+#include "zynqmp-zcu102-revA.dts"
+
+/ {
+	model = "ZynqMP RFC VSH";
+	compatible = "xlnx,zynqmp-zcu102-revB", "xlnx,zynqmp-zcu102", "xlnx,zynqmp";
+};
+
+/delete-node/ &gem3;
+&i2c0 {
+	status = "disabled";
+};
