@@ -99,3 +99,11 @@
 &zynqmp_dp_snd_card0 {
 	status = "disabled";
 };
+
+&watchdog0 {
+	status = "disabled";
+};
+
+&zynqmp_dpsub {
+	status = "disabled";
+};
