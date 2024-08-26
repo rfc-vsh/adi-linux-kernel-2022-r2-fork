@@ -68,8 +68,8 @@
 	cts-override;
 	device_type = "serial";
 	port-number = <0x00>;
-	/delete-property/ pinctrl-names = "default";
-	/delete-property/ pinctrl-0 = <&pinctrl_uart0_default>;
+	/delete-property/ pinctrl-names;
+	/delete-property/ pinctrl-0;
 };
 
 &uart1 {
