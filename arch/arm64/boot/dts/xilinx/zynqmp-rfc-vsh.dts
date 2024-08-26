@@ -107,3 +107,7 @@
 &zynqmp_dpsub {
 	status = "disabled";
 };
+
+&dcc {
+	status = "disabled";
+};
