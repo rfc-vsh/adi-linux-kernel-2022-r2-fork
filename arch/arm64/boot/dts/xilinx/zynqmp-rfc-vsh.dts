@@ -1,0 +1,113 @@
+#include "zynqmp-zcu102-revA.dts"
+
+/ {
+	model = "ZynqMP RFC VSH";
+	compatible = "xlnx,zynqmp-rfc-vsh", "xlnx,zynqmp-zcu102", "xlnx,zynqmp";
+
+	chosen {
+		bootargs = " earlycon console=ttyPS0,115200 clk_ignore_unused";
+		stdout-path = "serial0:115200n8";
+	};
+
+	aliases {
+		serial0 = &uart0;
+		spi0 = &spi0;
+		/delete-property/ ethernet0;
+		/delete-property/ i2c0;
+		/delete-property/ i2c1;
+		/delete-property/ nvmem0;
+		/delete-property/ rtc0;
+		/delete-property/ serial1;
+		/delete-property/ usb0;
+		/delete-property/ mmc0;
+	};
+
+};
+
+// /delete-node/ &gem3;
+
+&i2c0 {
+	status = "disabled";
+};
+
+&i2c1 {
+	status = "disabled";
+};
+
+&can1 {
+	status = "disabled";
+};
+
+&gem3 {
+	status = "disabled";
+};
+
+&gpu {
+	status = "disabled";
+};
+
+&qspi {
+	status = "disabled";
+};
+
+&sata {
+	status = "disabled";
+};
+
+&pcie {
+	status = "disabled";
+};
+
+&sdhci1 {
+	/delete-property/ no-1-8-v;
+	/delete-property/ pinctrl-names;
+	/delete-property/ pinctrl-0;
+};
+
+&uart0 {
+	cts-override;
+	device_type = "serial";
+	port-number = <0x00>;
+	/delete-property/ pinctrl-names;
+	/delete-property/ pinctrl-0;
+};
+
+&uart1 {
+	status = "disabled";
+};
+
+&usb0 {
+	status = "disabled";
+};
+
+&dwc3_0 {
+	status = "disabled";
+};
+
+&zynqmp_dp_snd_codec0 {
+	status = "disabled";
+};
+
+&zynqmp_dp_snd_pcm0 {
+	status = "disabled";
+};
+
+&zynqmp_dp_snd_pcm1 {
+	status = "disabled";
+};
+
+&zynqmp_dp_snd_card0 {
+	status = "disabled";
+};
+
+&watchdog0 {
+	status = "disabled";
+};
+
+&zynqmp_dpsub {
+	status = "disabled";
+};
+
+&dcc {
+	status = "disabled";
+};
